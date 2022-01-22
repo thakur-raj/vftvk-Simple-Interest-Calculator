@@ -1,16 +1,57 @@
+<!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+      <table>
+        <tr>
+          <td>Amount</td>
+          <td><input type="number" id="principal" /></td>
+        </tr>
+        <tr>
+          <td>Interest Rate</td>
+          <td>
+            <input
+              type="range"
+              id="rate"
+              min="1"
+              max="100"
+              value="10.25"
+              step="0.25"
+              onchange="updateRate()"
+            /><span id="rate_val"> 10.25% </span><br />
+          </td>
+        </tr>
+        <tr>
+          <td>No. of Years</td>
+          <td>
+            <select id="years">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <button onclick="return compute()">Compute Interest</button>
+        <br><br>
+      <span id="result"> </span>
+    </br></br>
+    <footer>&#169; This Calculator belongs to Raj Thakur</footer>
+    </div>
+  </body>
 </html>
