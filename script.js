@@ -1,6 +1,6 @@
 function compute() {
-  var principal = document.getElementById("principal").value;
-  if (principal == "0" || principal == "") {
+  var principal = parseFloat(document.getElementById("principal").value);
+  if (principal == 0 || isNaN(principal) || principal < 0) {
     alert("Enter a positive number");
     document.getElementById("principal").focus();
     location.reload();
