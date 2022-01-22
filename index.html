@@ -7,21 +7,22 @@
   </head>
   <body>
     <div class="maindiv">
-      <h1>Simple Interest Calculator</h1>
-
+        <center>
+      <img src="./money.png" height="50px" width="50px"/><br><h1>Simple Interest Calculator</h1>
+    </center>
       <table>
         <tr>
-          <td><label for="principal">Amount</label></td>
+          <td><label for="principal">Amount 💰</label></td>
           <td><input type="number" id="principal" /></td>
         </tr>
         <tr>
-          <td><label for="rate">Interest Rate</label></td>
+          <td><label for="rate">Interest Rate ⚖️</label></td>
           <td>
             <input
               type="range"
               id="rate"
               min="1"
-              max="100"
+              max="20"
               value="10.25"
               step="0.25"
               onchange="updateRate()"
@@ -30,7 +31,7 @@
           </td>
         </tr>
         <tr>
-          <td><label for="years">No. of Years</label></td>
+          <td><label for="years">No. of Years ⌚️</label></td>
           <td>
             <select id="years">
               <option value="1">1</option>
@@ -48,7 +49,9 @@
         </tr>
       </table>
       <br />
-      <button onclick="return compute()">Compute Interest</button>
+      <center>
+      <button onclick="return compute()">⏳ Compute Interest ⏳</button>
+    </center>
         <br><br>
       <span id="result"> </span>
     </br></br>
