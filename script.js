@@ -12,7 +12,7 @@ function compute() {
   var year = new Date().getFullYear() + parseInt(years);
   var amount = parseInt(principal) + interest;
   document.getElementById("result").innerHTML =
-    "If you deposit  <mark>" +
+    "Interest: <mark>"+interest+"</mark><br> <br>If you deposit  <mark>" +
     principal +
     "</mark>,<br>at an interest rate of  <mark>" +
     rate +
